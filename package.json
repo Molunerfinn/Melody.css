@@ -1,6 +1,6 @@
 {
   "name": "melody.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mini responsive css framwork",
   "main": "src/Melody.css",
   "scripts": {
