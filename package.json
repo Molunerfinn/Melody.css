@@ -1,0 +1,23 @@
+{
+  "name": "melody.css",
+  "version": "1.0.0",
+  "description": "A mini responsive css framwork",
+  "main": "src/Melody.css",
+  "scripts": {
+    "build": "stylus -c ./src/Melody.styl -o ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Molunerfinn/Melody.css.git"
+  },
+  "keywords": [
+    "css",
+    "framwork"
+  ],
+  "bugs": {
+    "url": "https://github.com/Molunerfinn/Melody.css/issues"
+  },
+  "homepage": "https://github.com/Molunerfinn/Melody.css",
+  "author": "Molunerfinn",
+  "license": "MIT"
+}

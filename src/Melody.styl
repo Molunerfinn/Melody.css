@@ -1,0 +1,101 @@
+/*!
+ * Project: Melody.css v1.0.1
+ * Author: Molunerfinn
+ * Copyright (c) 2017
+ */
+
+// Variables
+
+$columns = 12 // column nums
+$gutters = 15px // column gutters
+
+$xs = 768px // BreakPoint
+$sm = 768px
+$md = 992px
+$lg = 1366px
+
+$smw = 750px // Container width
+$mdw = 970px
+$lgw = 1280px
+
+// Mixins
+
+mediaCols(name,i)
+  .col-{name}-{i}
+    float left
+    width (1 / $columns) * i * 100%
+  .col-{name}-offset-{i}
+    margin-left (1 / $columns) * i * 100%
+  .col-{name}-pull-{i}
+    position relative
+    right (1 / $columns) * i * 100%
+  .col-{name}-push-{i}
+    position relative
+    left (1 / $columns) * i * 100%
+
+// Functions
+
+renderCols()
+  $cols = ''
+  for i in 1...($columns+1)
+    for n in arguments
+      $cols += '.col-' + n + '-' + i + ','
+  return $cols
+
+
+// layout
+.container,
+.container-fluid
+  padding-right $gutters
+  padding-left $gutters
+  margin-right auto
+  margin-left auto
+
+cols = renderCols('xs','sm','md','lg')
+
+{cols}
+  position relative
+  box-sizing border-box
+  padding-right $gutters
+  padding-left $gutters
+
+for i in 1...($columns+1)
+  mediaCols('xs',i)
+
+@media (max-width: $xs)
+  for i in 1...($columns+1)
+    mediaCols('xs',i)
+
+@media (min-width: $sm)
+  .container
+    width $smw
+  for i in 1...($columns+1)
+    mediaCols('sm',i)
+
+@media (min-width: $md)
+  .container
+    width $mdw 
+  for i in 1...($columns+1)
+    mediaCols('md',i)
+
+@media (min-width: $lg)
+  .container
+    width $lgw
+  for i in 1...($columns+1)
+    mediaCols('lg',i)
+
+// clear-fix
+selectors = '.container,.container-fluid,.clear-fix,.row'
+
+{selectors}
+  &:before,
+  &:after
+    content " "
+    display table
+    clear both
+    
+// Options
+
+.ex-width
+  margin-left -($gutters)
+  margin-right -($gutters)
