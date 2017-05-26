@@ -20,7 +20,7 @@ import 'melody.css'
 
 ## Docs
 
-See the Docs[https://molunerfinn.github.io/Melody.css/index.html]
+See the [Docs](https://molunerfinn.github.io/Melody.css/index.html)
 
 ## Build your own grid system
 
