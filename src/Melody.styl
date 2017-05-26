@@ -1,5 +1,5 @@
 /*!
- * Project: Melody.css v1.0.1
+ * Project: Melody.css v1.0.2
  * Author: Molunerfinn
  * Copyright (c) 2017
  */
@@ -37,7 +37,7 @@ mediaCols(name,i)
 
 renderCols()
   $cols = ''
-  for i in 1...($columns+1)
+  for i in 0...($columns+1)
     for n in arguments
       $cols += '.col-' + n + '-' + i + ','
   return $cols
@@ -51,6 +51,9 @@ renderCols()
   margin-right auto
   margin-left auto
 
+*
+  box-sizing border-box
+
 cols = renderCols('xs','sm','md','lg')
 
 {cols}
@@ -59,29 +62,29 @@ cols = renderCols('xs','sm','md','lg')
   padding-right $gutters
   padding-left $gutters
 
-for i in 1...($columns+1)
+for i in 0...($columns+1)
   mediaCols('xs',i)
 
 @media (max-width: $xs)
-  for i in 1...($columns+1)
+  for i in 0...($columns+1)
     mediaCols('xs',i)
 
 @media (min-width: $sm)
   .container
     width $smw
-  for i in 1...($columns+1)
+  for i in 0...($columns+1)
     mediaCols('sm',i)
 
 @media (min-width: $md)
   .container
     width $mdw 
-  for i in 1...($columns+1)
+  for i in 0...($columns+1)
     mediaCols('md',i)
 
 @media (min-width: $lg)
   .container
     width $lgw
-  for i in 1...($columns+1)
+  for i in 0...($columns+1)
     mediaCols('lg',i)
 
 // clear-fix
