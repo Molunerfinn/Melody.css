@@ -1,8 +1,9 @@
-
 # Melody.css
 A mini &amp; pure responsive css framwork inspired by Twitter Bootstrap.
 
 min+gzip: 1.46kb
+
+[![npm](https://img.shields.io/npm/dm/melody.css.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 ----
 
