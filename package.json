@@ -1,7 +1,7 @@
 {
   "name": "melody.css",
-  "version": "1.0.2",
-  "description": "A mini responsive css framwork",
+  "version": "1.0.3",
+  "description": "A mini responsive css framwork inspired by Twitter Bootstrap.",
   "main": "src/Melody.css",
   "scripts": {
     "build": "stylus -c ./src/Melody.styl -o ./src"
@@ -12,7 +12,10 @@
   },
   "keywords": [
     "css",
-    "framwork"
+    "framwork",
+    "grid",
+    "grid-system",
+    "bootstrap-like"
   ],
   "bugs": {
     "url": "https://github.com/Molunerfinn/Melody.css/issues"

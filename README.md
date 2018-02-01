@@ -9,6 +9,8 @@ min+gzip: 1.46kb
 
 ## Usage
 
+### NPM
+
 ```
 npm install melody.css
 ```
@@ -17,6 +19,14 @@ And in your file:
 
 ```js
 import 'melody.css'
+```
+
+### CDN
+
+Add the cdn link to your project:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/melody.css">
 ```
 
 ## Docs
